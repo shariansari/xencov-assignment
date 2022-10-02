@@ -1,0 +1,590 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ASSGNMENT</title>
+    <style>
+        body {
+            background-color: lightgray;
+            max-width: 100vw !important;
+        }
+
+
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+
+            margin: 0;
+            padding: 0;
+
+            background: url("https://images.unsplash.com/photo-1510903117032-f1596c327647?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=600&ixid=MnwxfDB8MXxyYW5kb218MHx8Y2FyfHx8fHx8MTY2NDYxNjQzNg&ixlib=rb-1.2.1&q=80&utm_campaign=api-credit&utm_medium=referral&utm_source=unsplash_source&w=1920");
+
+            height: 50vh;
+            width: 100vw;
+
+            background-position: center center;
+            background-repeat: no-repeat;
+            background-size: auto;
+
+        }
+
+        @media (max-width:600px) and (min-width:350px) {
+            #ex {
+                font-size: 1rem !important;
+
+
+            }
+
+            .request {
+                top: 32vh !important;
+                font-size: .8rem !important;
+                right: 30vw !important;
+            }
+
+            .pre {
+                left: 35vw !important;
+            }
+
+            .bigbox {
+                grid-template-columns: auto !important;
+
+                left: 10vw !important;
+                top: 10vh !important;
+                grid-gap: 2rem !important;
+            }
+
+            .box {
+                font-size: 1rem !important;
+            }
+
+
+        }
+
+        @media (max-width:1024px) and (min-width:601px) {
+            #ex {
+                font-size: 2rem !important;
+
+
+
+            }
+
+            .request {
+                top: 39vh !important;
+                font-size: 1.5rem !important;
+                right: 1vw !important;
+            }
+
+            .pre {
+                left: 40vw !important;
+
+            }
+
+            .pre pre,
+            .pre span {
+                font-size: 2rem !important;
+                line-height: 3rem !important;
+            }
+
+            .bigbox {
+                grid-template-columns: auto !important;
+
+                left: 27vw !important;
+                top: 10vh !important;
+                grid-gap: 3rem !important;
+            }
+
+            .box {
+                font-size: 1.5rem !important;
+            }
+
+
+        }
+
+        pre {
+            font-size: 2rem;
+            font-weight: bold;
+        }
+
+        #wego {
+            font-size: 1rem;
+        }
+
+        .ex {
+
+            color: aqua;
+            line-height: 1.2rem;
+            position: absolute;
+            top: 40vh;
+        }
+
+        #ex {
+            font-size: 2rem;
+        }
+
+        #by {
+            font-size: .8rem;
+            color: white;
+        }
+
+        .request {
+            display: inline;
+            background-color: white;
+            color: black;
+            padding: .8rem;
+            position: absolute;
+            top: 40vh;
+            right: 15vw;
+            font-size: 1rem;
+        }
+
+
+
+
+        .pre {
+            display: inline-block;
+            position: relative;
+            top: 8vh;
+            left: 2vw;
+
+            line-height: 1.3rem;
+        }
+
+        .pre span {
+            font-size: 1.5rem;
+
+        }
+
+        .bigbox {
+
+            position: relative;
+            left: 40vw;
+            align-items: center;
+            display: grid;
+            width: 20rem;
+
+            grid-gap: 4rem;
+            grid-template-columns: auto auto;
+
+
+
+        }
+
+        .box {
+            width: 20rem;
+            height: 5rem;
+            font-size: 1.3rem;
+
+
+
+        }
+
+        #one,
+        #two,
+        #three,
+        #four {
+            background-color: blue;
+            color: white;
+            border-radius: 50%;
+            padding: 0% 15%;
+
+        }
+
+        #one p,
+        #two p,
+        #three p #four p {
+            font-size: 20px;
+
+        }
+
+        .box1,
+        .box2,
+        .box3,
+        .box4 {
+            display: flex;
+            flex-direction: row;
+            gap: 2rem;
+
+        }
+
+        .img {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            column-gap: 4rem;
+
+        }
+
+
+
+        /* // */
+        .con {
+            position: relative;
+            top: 20vh;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        .container {
+
+
+            padding: 1vw;
+        }
+
+        .row:after {
+            content: "";
+            display: table;
+            clear: both
+        }
+
+        .column-50 {
+            float: left;
+
+            width: 30%;
+            padding: 8px;
+        }
+
+        .last {
+            float: left;
+            width: 20%;
+            padding: 8px;
+        }
+
+
+        .column-05 {
+            float: right;
+
+        }
+
+        @media screen and (max-width: 1000px) {
+
+            .column-50 {
+                width: 100%;
+                text-align: center;
+            }
+
+            .column-05 {
+                width: auto;
+
+            }
+
+            img {
+                margin: auto;
+            }
+        }
+
+        @media screen and (max-width: 1000px) {
+
+            .floarleft {
+
+                width: auto !important;
+
+
+            }
+
+
+            .floatright {
+                width: 100% !important;
+                text-align: center !important;
+
+            }
+
+            img {
+                margin: auto !important;
+                max-width: 100vw !important;
+            }
+        }
+
+        .floatleft {
+            float: left;
+        }
+
+        .floatright {
+
+            float: right;
+            width: 30%;
+            padding: 8px;
+        }
+
+        .footer {
+            background-color: rgb(29, 175, 233);
+            height: 10vw;
+            display: flex;
+            align-items: center;
+            padding: 20px;
+
+
+        }
+
+        footer {
+            display: flex;
+            align-items: center;
+            padding: 20px;
+            background-color: rgb(29, 175, 233);
+
+
+        }
+
+        .req {
+            display:block;
+            background-color:black;color: white;
+            padding: .8rem;
+            position: absolute;
+            right: 15%;
+        }
+        @media screen and (max-width:1000px){
+            .footer{
+                width: 100%;
+                text-align: center;
+                justify-content: center;
+                background-color: rgb(29, 175, 233) ;
+            }
+            .req{
+                width: auto;
+                text-align: center;
+                bottom: -2%;
+                align-items: center;
+                justify-content: center;
+                right: auto !important;
+
+            }
+            footer{
+                display: flex !important;
+                flex-direction: column !important;
+                align-items: center !important;
+                justify-content: center !important;
+            }
+            
+        }
+        .las{
+            background-color: white;
+            display: flex;
+            flex-direction: row;
+            height: 5vh;
+            padding: 20px;
+            align-items: center;
+
+        }
+        .mem{
+            margin-right: 10vw;
+        }
+        .sup{
+            margin-right: 50vw;
+        }
+        @media screen  and (max-width:1000px){
+            .las{
+                display:flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+            }
+            .men,.sup{
+                margin: 0;
+            }
+            
+        }
+        .wego{
+            background-color: white;
+            height: 20vh;
+            padding: 20px;
+            
+        }
+        .wifi{
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            font-size: 2rem;
+        }
+        @media screen  and (max-width:1000px){
+            .wego{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+            }
+            
+        }
+       
+            
+        
+
+
+    </style>
+</head>
+
+<body>
+    <header>
+        <pre
+            style="color:white"><span class="main-text"> WIRELES <br> MOBILE INTERNET</span><br><span id="wego">  WE GO WITH YOU!</span></pre>
+        <div class="ex">
+            <pre> <span id="ex">EXCLUSIVE MEMBERSHIP</span><BR> <span id="by">BY REFERRAL ONLY-STARTING JAN 31ST</span></BR></pre>
+        </div>
+        <div class="request">
+            <span>REQUEST TO BE A MEMBER &#8594</span>
+        </div>
+
+
+    </header>
+
+    <div class="dis">
+
+        <span class="pre">
+            <pre>HOW DO</span> <BR><span>I GET<br>STARTED?</pre>
+        </span>
+
+        <div class="bigbox">
+            <div class=" box box1">
+                <div class="img">
+                    <span id="one">
+                        <p>1</p>
+                    </span>
+                    <br>
+                    <img src="R.png" alt="text-page" style="height: 2rem">
+                </div>
+                <div class="text">Fill out the Membership request form.this can take 2 business days for approval</div>
+            </div>
+            <div class="box box2">
+                <div class="img">
+                    <span id="two">
+                        <p>2</p>
+                    </span>
+                    <br>
+                    <img src="R (1).png" alt="finger" style="height: 2rem">
+                </div>
+                <div class="text">Choose the device or plan for you</div>
+            </div>
+            <div class="box box3">
+                <div class="img">
+                    <span id="three">
+                        <p>3</p>
+                    </span>
+                    <br>
+                    <img src="R 2.png" alt="inbox" style="height:2rem">
+                </div>
+                <div class="text">We mail you your start up package</div>
+            </div>
+            <div class="box box4">
+                <div class="img">
+                    <span id="four">
+                        <p>4</p>
+                    </span>
+                    <br>
+                    <img src="R 3.png" alt="tick" style="height: 2rem">
+                </div>
+                <div class="text">You are good to go!</div>
+            </div>
+        </div>
+    </div>
+    <!--first container -->
+    <div class="con">
+        <div class="container" style="background-color: white">
+            <div class="row">
+                <div class="column-50">
+
+                    <h1 class="large-font" style="color:black"><b>
+                            <pre>WHY IS<br>THERE A<br>MEMBERSHIP?</pre>
+                        </b></h1>
+                    <p>it is our mission to service a smaller community of wireless mobile internet users with the best
+                        communication and service as posible we are looking for a community of users that want to work
+                        together ,that understand this industry is changing daily and can be responsible data users!
+                        with
+                        our membership process we will do our do diligence to maintain a community of data userswith
+                        fair
+                        prices,informative updates,shared knowledge base and live forums for community interaction. </p>
+                </div>
+                <div class="column-05">
+                    <img src="https://source.unsplash.com/random/672x350?boy" width="672" height="350">
+                </div>
+            </div>
+        </div>
+        <!-- second container -->
+        <div class="container" style="background-color: white">
+            <div class="row">
+
+                <div class="floatright">
+
+                    <h1 class="large-font" style="color:black"><b>
+                            <pre>IS THIS<br>SERVICE FOR<br>EVERYONE?</pre>
+                        </b></h1>
+                    <p>NO.We are looking for reresponsible data usera.we do not want users that download large amount of
+                        torrents,abuse streaming limits,use TB's of data per month ,game several hours a day or would be
+                        considered "couch patatoes".</p>
+                    <hr>
+                    <h1 class="large-font" style="color:black;"><b>
+                            <pre>DO I HAVE TO SIGN A<br>CONTRACT OR DO A <br>CREDIT CHECK?</pre>
+                        </b></h1>
+                    <p>No.No there is no contact term.there is no credit check</p>
+
+                </div>
+                <div class="floatleft">
+                    <img src="https://source.unsplash.com/random/672x350?girl" width="672" height="350">
+
+                </div>
+
+            </div>
+        </div>
+        <!--third container -->
+        <div class="container" style="background-color: white">
+            <div class="row">
+                <div class="column-50 last">
+
+                    <h1 class="large-font" style="color:black"><b>
+                            <pre>HOW LONG<br>IS MY<br>MEMBERSHIP<br>FOR?</pre>
+                        </b></h1>
+                    <p>There are three options for memberships Month to months or 6 months </p>
+                </div>
+                <div class="column-05 ">
+                    <img src="https://source.unsplash.com/random/960x350?tablet" width="960" height="350">
+                </div>
+            </div>
+        </div>
+        <!-- footer -->
+        <footer>
+            <div class="footer">
+                <h1><pre><span>HOW DO I GET<br><span>STARTED?</span></span></pre></h1>
+            </div>
+            <div class="req">
+               <p> <span>REQUEST TO BE A MEMBER &#8594</span></p>
+            </div>
+        </footer>
+        <!-- footer last -->
+        <div class="las">
+            <div class="mem" style="font-size: 1.2rem">
+                MEMBERSHIP PLANS
+            </div>
+            <div class="sup" style="font-size: 1.2rem" >
+                SUPPORT & FAQ
+            </div>
+            <div class="join"  style="font-size: 1.2rem">
+                JOIN NOW &#8594
+                
+            </div>
+            
+        </div>
+        <div class="wego">
+            <hr>
+            <br>
+            <p class="wifi">WE GO WIFI</p>
+            <br>
+            <p>With combined experience in the wireless industry of 48 years, our mission is to deliver and exciting new products to RVes, rural areas ,travelers,truckers and enthusiast across the United states at the best prices possible. </p>
+
+        </div>
+
+
+
+
+    </div>
+
+
+
+
+
+
+
+</body>
+
+</html>
